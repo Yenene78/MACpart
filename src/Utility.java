@@ -209,6 +209,25 @@ public final class Utility {
 	    	crc8 = CRC_INITIAL;
 	    }
 	}
+
+	public int checksum(byte[] data){
+		int sum = 0;
+		for(int i = 0; i < data.length - 1; i++){
+			sum += data[i] & 0xff;
+		}
+		sum = sum % 256;
+		System.out.println(sum);
+		if(sum == (data[data.length-1] & 0xff)){
+			return 1;
+		}else{
+			return 0;
+		}
+	}
+
+	public static void main(String[] agrs) {
+		Utility test = new Utility();
+		// test;
+	}
 }
 
 

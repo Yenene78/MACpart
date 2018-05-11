@@ -21,10 +21,6 @@ public class MAChost extends Thread{
         this.TOTAL_NUM = totalNum;
     }
 
-    public void checksum(){
-        // TODO: checksum?
-    }
-
     public void run(){
         while(TOTAL_NUM != 0){
             if (STATE == 0) {   // IDLE;
